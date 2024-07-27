@@ -92,7 +92,6 @@ const CustomTooltip: React.FC<CustomTooltipProps> = ({ active, payload }) => {
       </div>
     );
   }
-
   return null;
 };
 
