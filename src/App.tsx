@@ -1,10 +1,10 @@
 import "./App.css";
-import Button from "./components/button/Button";
+import ProcessesAndCharts from "./pages/ProcessesAndCharts";
 
 function App() {
   return (
     <>
-      <Button></Button>
+      <ProcessesAndCharts />
     </>
   );
 }
