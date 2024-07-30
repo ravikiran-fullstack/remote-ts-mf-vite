@@ -1,10 +1,12 @@
 import "./App.css";
-import ProcessesAndCharts from "./pages/ProcessesAndCharts";
+import PipelineMain from "./components/pipelineMain/PipelineMain";
+// import ProcessesAndCharts from "./pages/ProcessesAndCharts";
 
 function App() {
   return (
     <>
-      <ProcessesAndCharts />
+      {/* <ProcessesAndCharts /> */}
+      <PipelineMain/>
     </>
   );
 }

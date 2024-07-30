@@ -1,0 +1,463 @@
+{
+    "pipelineStepsData": [
+        {
+            "stage": "endToEndProcess",
+            "title": "End to End Process",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Initialize Pipeline",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Pipeline initialized successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Verify Platform & Tech Stack",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Platform Verified successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Build Application",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Application built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Scan Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Scanned successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Publish Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Published successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Build Image",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Image Built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Scan Image",
+                    "status": "Failed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "error",
+                            "message": "Image Scan Failed"
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Publish Image",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 9,
+                    "name": "Publish Image to Container Registry",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 10,
+                    "name": "Publish Image for Deployment",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                }
+            ]
+        },
+        {
+            "stage": "preDeploy",
+            "title": "Pre-Deployment",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Initialize Pipeline",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Pipeline initialized successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Verify Platform & Tech Stack",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Platform Verified successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Build Application",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Application built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Scan Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Scanned successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Publish Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Published successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Build Image",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Image Built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Scan Image",
+                    "status": "Failed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "error",
+                            "message": "Image Scan Failed"
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Publish Image",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 9,
+                    "name": "Publish Image to Container Registry",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 10,
+                    "name": "Publish Image for Deployment",
+                    "status": "Not Started",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                }
+            ]
+        },
+        {
+            "stage": "devDeploy",
+            "title": "Dev Deployment",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Ready for Dev",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Ready for Dev"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Deploy to Dev",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Deployed to Dev successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Test QAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Test QAT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "stage": "qatDeploy",
+            "title": "QAT Deployment",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Ready for QAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Ready for QAT"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Deploy to QAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Deployed to QAT successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Test QAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Test QAT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "stage": "uatDeploy",
+            "title": "UAT Deployment",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Ready for UAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Ready for UAT"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Deploy to UAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Deployed to UAT successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Test UAT",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Test UAT"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "stage": "prodDeploy",
+            "title": "Prod Deployment",
+            "steps": [
+                {
+                    "id": 1,
+                    "name": "Initialize Pipeline",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Pipeline initialized successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "name": "Verify Platform & Tech Stack",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Platform Verified successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 3,
+                    "name": "Build Application",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Application built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 4,
+                    "name": "Scan Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Scanned successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 5,
+                    "name": "Publish Build",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Build Published successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 6,
+                    "name": "Build Image",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "info",
+                            "message": "Image Built successfully"
+                        }
+                    ]
+                },
+                {
+                    "id": 7,
+                    "name": "Scan Image",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": [
+                        {
+                            "type": "error",
+                            "message": "Image Scan Failed"
+                        }
+                    ]
+                },
+                {
+                    "id": 8,
+                    "name": "Publish Image",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 9,
+                    "name": "Publish Image to Container Registry",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                },
+                {
+                    "id": 10,
+                    "name": "Publish Image for Deployment",
+                    "status": "Completed",
+                    "time": "2021-09-01T12:00:00Z",
+                    "notification": []
+                }
+            ]
+        }
+    ]
+}

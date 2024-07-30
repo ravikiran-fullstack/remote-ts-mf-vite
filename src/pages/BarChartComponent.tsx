@@ -4,7 +4,6 @@ import {
   BarChart,
   CartesianGrid,
   Legend,
-  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -64,8 +63,16 @@ const useGetBarChartData = () => {
   const fetchData = async () => {
     setLoading(true);
     setError(null);
+
+    const apiUrl = import.meta.env.VITE_BACKEND_API_URL;
+    // console.log("API URL: ", apiUrl);
+    if (!apiUrl) {
+      setError("API URL is not defined");
+      setLoading(false);
+      return;
+    }
     try {
-      const response = await fetch("http://localhost:9001/coinsInfo");
+      const response = await fetch(apiUrl);
       const data = await response.json();
       setData(data);
     } catch (error) {
