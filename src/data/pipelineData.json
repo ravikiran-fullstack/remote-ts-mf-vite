@@ -1,7 +1,7 @@
 {
     "pipelineStepsData": [
         {
-            "stage": "endToEndProcess",
+            "environment": "endToEndProcess",
             "title": "End to End Process",
             "steps": [
                 {
@@ -112,7 +112,7 @@
             ]
         },
         {
-            "stage": "preDeploy",
+            "environment": "preDeploy",
             "title": "Pre-Deployment",
             "steps": [
                 {
@@ -223,7 +223,7 @@
             ]
         },
         {
-            "stage": "devDeploy",
+            "environment": "devDeploy",
             "title": "Dev Deployment",
             "steps": [
                 {
@@ -265,7 +265,7 @@
             ]
         },
         {
-            "stage": "qatDeploy",
+            "environment": "qatDeploy",
             "title": "QAT Deployment",
             "steps": [
                 {
@@ -307,7 +307,7 @@
             ]
         },
         {
-            "stage": "uatDeploy",
+            "environment": "uatDeploy",
             "title": "UAT Deployment",
             "steps": [
                 {
@@ -349,7 +349,7 @@
             ]
         },
         {
-            "stage": "prodDeploy",
+            "environment": "prodDeploy",
             "title": "Prod Deployment",
             "steps": [
                 {

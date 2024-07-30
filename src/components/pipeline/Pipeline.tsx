@@ -3,6 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import PipelineStep from "../pipelineStep/PipelineStep";
 import useGetPipelineData from "../../hooks/useGetPipelineData";
 import { Box } from "@mui/material";
+import AllPipelinesModal from "../allPipelinesModal/AllPipelinesModal";
 
 interface Notification {
   type: string;
@@ -40,10 +41,28 @@ const useStyles = makeStyles(() => {
       justifyContent: "start",
       marginTop: "1rem",
     },
+    modalStyles: {
+      position: "absolute",
+      top: "50%",
+      left: "50%",
+      transform: "translate(-50%, -50%)",
+      width: 400,
+      bgcolor: "background.paper",
+      border: "2px solid #000",
+      p: 4,
+    },
+    linkStyle: {
+      cursor: "pointer",
+      color: "#007bff",
+      textDecoration: "underline",
+    }
   };
 });
 
 const Pipeline: React.FC<PipelineProps> = (props) => {
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
   console.log(
     "pipelineStageName in pipeline component",
     props.pipelineStageName
@@ -64,7 +83,7 @@ const Pipeline: React.FC<PipelineProps> = (props) => {
     <div className={classes.container}>
       <div className={classes.containerHeading}>
         <h4>Pipeline</h4>
-        <a href="#">See All Environments</a>
+        <span className={classes.linkStyle} onClick={handleOpen}>See All Environments</span>
       </div>
       <Box className={classes.pipelineContainer}>
         {pipelineData &&
@@ -78,6 +97,9 @@ const Pipeline: React.FC<PipelineProps> = (props) => {
             );
           })}
       </Box>
+      <div>
+        <AllPipelinesModal open={open} handleClose={handleClose}/>
+      </div>
     </div>
   );
 };

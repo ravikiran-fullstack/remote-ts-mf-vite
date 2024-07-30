@@ -16,13 +16,13 @@ interface Notification {
 
   interface PipelineStage{
     environment: string;
+    title: string;
     steps: PipelineStep[];
   }
 
 // Define the custom hook
-const useGetPipelineData = ( pipelineStageName : string) => {
-  console.log('in hook pipelineStageName',pipelineStageName);
-  const [pipelineData, setPipelineData] = useState<PipelineStage>();
+const useGetAllPipelineData = ( ) => {
+  const [allPipelinesData, setAllPipelinesData] = useState<PipelineStage[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -30,11 +30,9 @@ const useGetPipelineData = ( pipelineStageName : string) => {
     const fetchData = async () => {
       try {
         const response = await axios.get<PipelineStage[]>("http://localhost:9001/pipelineStepsData");
-        console.log('response.data',response.data);
-        console.log('pipelineStageName',response.data.find(pipelineStageInfo => pipelineStageInfo.environment ===  pipelineStageName));
-        setPipelineData(response.data.find(pipelineStageInfo => pipelineStageInfo.environment ===  pipelineStageName));
+        setAllPipelinesData(response.data);
         setLoading(false);
-        console.log('in hook end',pipelineData);
+        console.log('in hook end',allPipelinesData);
       } catch (err) {
         setError(`Error occurred while fetching data: ${err}`);
         setLoading(false);
@@ -44,7 +42,7 @@ const useGetPipelineData = ( pipelineStageName : string) => {
     fetchData();
   }, []);
 
-  return { pipelineData, loading, error };
+  return { allPipelinesData, loading, error };
 };
 
-export default useGetPipelineData;
+export default useGetAllPipelineData;
