@@ -4,8 +4,9 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 import HourglassBottomIcon from "@mui/icons-material/HourglassBottom";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import "./pipeline.css";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import useGetPipelineData from "../../hooks/useGetPipelineData";
 import AllPipelinesModal from "../allPipelinesModal/AllPipelinesModal";
 
@@ -43,9 +44,9 @@ const useStyles = makeStyles({
       position: "absolute",
       content: '""',
       borderBottom: "1px solid #ccc",
-      width: "89%",
+      width: "81%",
       top: "12px",
-      left: "-45%",
+      left: "-41%",
       zIndex: 2,
     },
     "&:first-child::before": {
@@ -56,11 +57,14 @@ const useStyles = makeStyles({
     },
   },
   icon: {
-    color: "green",
+    color: "#007bff",
   },
   stepTextContent: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     border: "1px solid #ccc",
-    width: "150px",
+    width: "100px",
   },
   container: {
     width: "1248px",
@@ -88,6 +92,21 @@ const CSSPipeline: React.FC<PipelineProps> = (props) => {
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
+  const renderIcon = (status: string) => {
+    switch (status) {
+      case "Completed":
+        return <CheckCircleIcon color="success" className={classes.icon} />;
+      case "Failed":
+        return <ReportProblemIcon color="error" className={classes.icon} />;
+      case "Not Started":
+        return (
+          <HourglassBottomIcon color="disabled" className={classes.icon} />
+        );
+      default:
+        return <ArrowForwardIcon color="info" className={classes.icon} />;
+    }
+  };
+
   return (
     <div className={classes.container}>
       <div className={classes.containerHeading}>
@@ -97,39 +116,53 @@ const CSSPipeline: React.FC<PipelineProps> = (props) => {
         </span>
       </div>
       <Box style={{ marginTop: "20px" }}>
-        <div className={classes.stepperWrapper}>
+        {/* <div className={classes.stepperWrapper}>
           <div className={classes.stepperItem}>
             <CheckCircleIcon className={classes.icon} />
             <div className={classes.stepTextContent}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              numquam.
+              <Typography variant="h6">Deploy</Typography>
+              <ArrowRightIcon />
             </div>
           </div>
           <div className={classes.stepperItem}>
             <ArrowForwardIcon className={classes.icon} />
             <div className={classes.stepTextContent}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              numquam.
+              <Typography variant="h6">Deploy</Typography>
+              <ArrowRightIcon />
             </div>
           </div>
           <div className={classes.stepperItem}>
             <ReportProblemIcon className={classes.icon} />
             <div className={classes.stepTextContent}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              numquam.
+              <Typography variant="h6">Deploy</Typography>
+              <ArrowRightIcon />
             </div>
           </div>
           <div className={classes.stepperItem}>
             <HourglassBottomIcon className={classes.icon} />
             <div className={classes.stepTextContent}>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim,
-              numquam.
+              <Typography variant="h6">Deploy</Typography>
+              <ArrowRightIcon />
             </div>
           </div>
+        </div> */}
+        <div className={classes.stepperWrapper}>
+          {pipelineData &&
+            pipelineData.steps.map((step: PipelineStep) => {
+              return (
+                <div className={classes.stepperItem}>
+                  {renderIcon(step.status)}
+                  <div className={classes.stepTextContent}>
+                    <p>{step.name}</p>
+                    <ArrowRightIcon />
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </Box>
       <div>
-        <AllPipelinesModal open={open} handleClose={handleClose}/>
+        <AllPipelinesModal open={open} handleClose={handleClose} />
       </div>
     </div>
   );
