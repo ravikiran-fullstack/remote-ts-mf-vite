@@ -36,8 +36,8 @@ export const customTheme = createTheme({
         root: {
           border: "1px solid white",
           textTransform: "none",
-          minWidth: "200px",
-          width: "200px",
+          // minWidth: "100px",
+          // width: "100%",
           color: "white",
           borderBottom: "1px solid white",
           "&.Mui-selected": {

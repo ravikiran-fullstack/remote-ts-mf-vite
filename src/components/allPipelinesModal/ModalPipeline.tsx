@@ -5,7 +5,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import ReportProblemIcon from "@mui/icons-material/ReportProblem";
 import FileUploadRoundedIcon from "@mui/icons-material/FileUploadRounded";
 import ArrowRightIcon from "@mui/icons-material/ArrowRight";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import useGetPipelineData from "../../hooks/useGetPipelineData";
 import AllPipelinesModal from "../allPipelinesModal/AllPipelinesModal";
 
@@ -31,7 +31,9 @@ const useStyles = makeStyles({
   stepperWrapper: {
     display: "flex",
     justifyContent: "space-between",
-    marginBottom: "20px",
+    alignItems: "flex-start",
+    // flex: 1,
+    padding: "15px 0 0 20px",
   },
   stepperItem: {
     position: "relative",
@@ -39,7 +41,7 @@ const useStyles = makeStyles({
     flexDirection: "column",
     alignItems: "center",
     flex: 1,
-    width: "100px",
+    width: "130px",
     "&::before": {
       position: "absolute",
       content: '""',
@@ -77,8 +79,9 @@ const useStyles = makeStyles({
   },
   paddedDiv: {},
   container: {
-    width: "1248px",
-    padding: "2rem",
+    // border: "3px solid #c5a5da",
+    // width: "1248px",
+    padding: "1rem",
     display: "flex",
     flexDirection: "column",
   },
@@ -92,14 +95,64 @@ const useStyles = makeStyles({
     color: "#007bff",
     textDecoration: "underline",
   },
+
+  modalPipelineContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "start",
+    marginTop: "1rem",
+    // padding: "2rem",
+    // width: "100%",
+    // border: "3px solid #c5a5da",
+  },
+
+  modalPipelineHeading: {
+    width: "100px",
+    // border: "3px solid #c5a5da",
+    textAlign: "right",
+    paddingTop: "33px",
+    marginRight: "20px",
+  },
+
+  modalPipelineDividerLine: {
+    position: 'relative',
+    width: '1px',          // Set the width of the vertical line
+    height: '100px',       // Set the height of the vertical line
+    backgroundColor: '#B3B3B3', // Set the color of the vertical line
+
+    '&::before, &::after': {
+      content: '""',
+      position: 'absolute',
+      width: '10px',       // Set the width of the horizontal lines
+      height: '1px',       // Set the height of the horizontal lines
+      backgroundColor: '#B3B3B3', // Set the color of the horizontal lines
+    },
+
+    '&::before': {
+      top: '0',            // Position the first horizontal line at the top
+      left: '0px',       // Position it 10px to the left of the vertical line
+    },
+
+    '&::after': {
+      bottom: '0',         // Position the second horizontal line at the bottom
+      left: '0px',       // Position it 10px to the left of the vertical line
+    },
+  },
+
+  modalPipelineContent: {
+    // border: "3px solid #c5a5da",
+    paddingTop: "20px",
+  },
 });
-const Pipeline: React.FC<PipelineProps> = (props) => {
+const ModalPipeline: React.FC<PipelineProps> = (props) => {
   const classes = useStyles();
   const { pipelineData, loading, error } = useGetPipelineData(
     props.pipelineStageName
   );
+
+  console.log("pipelineData title", pipelineData?.title);
+
   const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   if (loading) return <div>Loading...</div>;
@@ -131,13 +184,13 @@ const Pipeline: React.FC<PipelineProps> = (props) => {
 
   return (
     <div className={classes.container}>
-      <div className={classes.containerHeading}>
-        <h4>Pipeline</h4>
-        <span className={classes.linkStyle} onClick={handleOpen}>
-          See All Environments
-        </span>
-      </div>
-      <Box style={{ marginTop: "20px" }}>
+      <Box className={classes.modalPipelineContainer}>
+        <div className={classes.modalPipelineHeading}>
+          <Typography variant="body1" gutterBottom>
+            {pipelineData?.title}
+          </Typography>
+        </div>
+        <div className={classes.modalPipelineDividerLine}></div>
         <div className={classes.stepperWrapper}>
           {pipelineData &&
             pipelineData.steps.map((step: PipelineStep) => {
@@ -167,4 +220,4 @@ const Pipeline: React.FC<PipelineProps> = (props) => {
   );
 };
 
-export default Pipeline;
+export default ModalPipeline;

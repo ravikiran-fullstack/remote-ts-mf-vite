@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 import React from "react";
 import useGetAllPipelineData from "../../hooks/useGetAllPipelineData";
-import PipelineStep from "../pipelineStep/PipelineStep";
+import ModalPipeline from "./ModalPipeline";
 
 const useStyles = makeStyles(() => {
   return {
@@ -49,18 +49,18 @@ const useStyles = makeStyles(() => {
   };
 });
 
-interface Notification {
-  type: string;
-  message: string;
-}
+// interface Notification {
+//   type: string;
+//   message: string;
+// }
 
-interface PipelineStep {
-  id: number;
-  name: string;
-  status: string;
-  time: string;
-  notification: Notification[];
-}
+// interface PipelineStep {
+//   id: number;
+//   name: string;
+//   status: string;
+//   time: string;
+//   notification: Notification[];
+// }
 
 // interface PipelineData {
 //   environment: string;
@@ -102,8 +102,8 @@ const AllPipelinesModal: React.FC<ModalProps> = (props) => {
             allPipelinesData.map((stage) => {
               return (
                 <div key={stage.environment}>
-                  <Typography>{stage.title}</Typography>
-                  <Box className={classes.singlePipelineContainer}>
+                  {/* <Typography>{stage.title}</Typography> */}
+                  {/* <Box className={classes.singlePipelineContainer}>
                     {stage.steps &&
                       stage.steps.map((step: PipelineStep) => {
                         return (
@@ -114,7 +114,8 @@ const AllPipelinesModal: React.FC<ModalProps> = (props) => {
                           />
                         );
                       })}
-                  </Box>
+                  </Box> */}
+                  <ModalPipeline pipelineStageName={stage.environment} />
                 </div>
               );
             })}

@@ -6,6 +6,79 @@ import PipelineMain from "./components/pipelineMain/PipelineMain";
 // import ReactArcher from "./components/lines/ReactArcher";
 // import ProcessesAndCharts from "./pages/ProcessesAndCharts";
 
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
+const theme = createTheme({
+  components: {
+    
+    MuiTabs: {
+      styleOverrides: {
+        fixed: {
+          // Your custom styles here
+          // backgroundColor: "lightblue",
+        },
+        indicator: {
+          backgroundColor: "transparent",
+        },
+
+        root: {
+          textTransform: "lowercase",
+          button: {
+            "&:hover": {
+              border: "1px solid #E0E0E0",
+              borderBottom: "none",
+              color:'red'
+            },
+          },
+        },
+
+        
+      },
+    },
+
+    MuiButtonBase: {
+      
+      defaultProps: {
+        // The props to apply
+        
+        disableRipple: true, // No more ripple, on the whole application 💣!
+      },
+    },
+    // MuiButtonBase: {
+    //   styleOverrides: {
+    //     root: {
+    //       // Your custom styles here
+    //       backgroundColor: "#E0E0E0",
+    //       color: "black",
+    //       borderTopLeftRadius:"5px",
+    //       borderTopRightRadius:"5px",
+    //     },
+    //   },
+    // },
+    MuiTab: {
+      styleOverrides: {
+        root: {
+          // Your custom styles here
+          textTransform: "none",
+          backgroundColor: "#fff",
+          color: "black",
+          border: "1px solid #E0E0E0",
+          borderTopLeftRadius: "5px",
+          borderTopRightRadius: "5px",
+          borderBottom: "none",
+          "&.Mui-selected": {
+            borderBottom: "none",
+          },
+          "&.Mui-selected:hover": {
+            backgroundColor: "#fff",
+            
+          },
+        },
+      },
+    },
+  },
+});
+
 function App() {
   // const box1Ref = useRef<HTMLDivElement>(null);
   // const box2Ref = useRef<HTMLDivElement>(null);
@@ -42,7 +115,9 @@ function App() {
   return (
     <>
       {/* <ProcessesAndCharts /> */}
-      <PipelineMain />
+      <ThemeProvider theme={theme}>
+        <PipelineMain />
+      </ThemeProvider>
       {/* <Box display="flex" flexDirection="column" alignItems="center">
         <Box
           ref={box1Ref}

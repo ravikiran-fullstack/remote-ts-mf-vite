@@ -7,6 +7,7 @@
                 {
                     "id": 1,
                     "name": "Initialize Pipeline",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -19,6 +20,7 @@
                 {
                     "id": 2,
                     "name": "Verify Platform & Tech Stack",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -31,6 +33,7 @@
                 {
                     "id": 3,
                     "name": "Build Application",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -43,6 +46,7 @@
                 {
                     "id": 4,
                     "name": "Scan Build",
+                    "description": "Tests & Scans",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -55,6 +59,7 @@
                 {
                     "id": 5,
                     "name": "Publish Build",
+                    "description": "Upload Artifact (Nexus)",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -67,6 +72,7 @@
                 {
                     "id": 6,
                     "name": "Build Image",
+                    "description": "Build (Docker)",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -79,6 +85,7 @@
                 {
                     "id": 7,
                     "name": "Scan Image",
+                    "description": "Aqua Scan",
                     "status": "Failed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -91,6 +98,7 @@
                 {
                     "id": 8,
                     "name": "Publish Image",
+                    "description": "Upload Artifact (DTR)",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -98,6 +106,7 @@
                 {
                     "id": 9,
                     "name": "Publish Image to Container Registry",
+                    "description": "",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -105,6 +114,7 @@
                 {
                     "id": 10,
                     "name": "Publish Image for Deployment",
+                    "description": "",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -118,6 +128,7 @@
                 {
                     "id": 1,
                     "name": "Initialize Pipeline",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -130,6 +141,7 @@
                 {
                     "id": 2,
                     "name": "Verify Platform & Tech Stack",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -142,6 +154,7 @@
                 {
                     "id": 3,
                     "name": "Build Application",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -154,6 +167,7 @@
                 {
                     "id": 4,
                     "name": "Scan Build",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -166,6 +180,7 @@
                 {
                     "id": 5,
                     "name": "Publish Build",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -178,6 +193,7 @@
                 {
                     "id": 6,
                     "name": "Build Image",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -190,6 +206,7 @@
                 {
                     "id": 7,
                     "name": "Scan Image",
+                    "description": "",
                     "status": "Failed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -202,6 +219,7 @@
                 {
                     "id": 8,
                     "name": "Publish Image",
+                    "description": "",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -209,6 +227,7 @@
                 {
                     "id": 9,
                     "name": "Publish Image to Container Registry",
+                    "description": "",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -216,6 +235,7 @@
                 {
                     "id": 10,
                     "name": "Publish Image for Deployment",
+                    "description": "",
                     "status": "Not Started",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -229,6 +249,7 @@
                 {
                     "id": 1,
                     "name": "Ready for Dev",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -241,6 +262,7 @@
                 {
                     "id": 2,
                     "name": "Deploy to Dev",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -253,6 +275,7 @@
                 {
                     "id": 3,
                     "name": "Test QAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -271,6 +294,7 @@
                 {
                     "id": 1,
                     "name": "Ready for QAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -283,6 +307,7 @@
                 {
                     "id": 2,
                     "name": "Deploy to QAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -295,6 +320,7 @@
                 {
                     "id": 3,
                     "name": "Test QAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -313,6 +339,7 @@
                 {
                     "id": 1,
                     "name": "Ready for UAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -325,6 +352,7 @@
                 {
                     "id": 2,
                     "name": "Deploy to UAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -337,6 +365,7 @@
                 {
                     "id": 3,
                     "name": "Test UAT",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -355,6 +384,7 @@
                 {
                     "id": 1,
                     "name": "Initialize Pipeline",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -367,6 +397,7 @@
                 {
                     "id": 2,
                     "name": "Verify Platform & Tech Stack",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -379,6 +410,7 @@
                 {
                     "id": 3,
                     "name": "Build Application",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -391,6 +423,7 @@
                 {
                     "id": 4,
                     "name": "Scan Build",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -403,6 +436,7 @@
                 {
                     "id": 5,
                     "name": "Publish Build",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -415,6 +449,7 @@
                 {
                     "id": 6,
                     "name": "Build Image",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -427,6 +462,7 @@
                 {
                     "id": 7,
                     "name": "Scan Image",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": [
@@ -439,6 +475,7 @@
                 {
                     "id": 8,
                     "name": "Publish Image",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -446,6 +483,7 @@
                 {
                     "id": 9,
                     "name": "Publish Image to Container Registry",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
@@ -453,6 +491,7 @@
                 {
                     "id": 10,
                     "name": "Publish Image for Deployment",
+                    "description": "",
                     "status": "Completed",
                     "time": "2021-09-01T12:00:00Z",
                     "notification": []
